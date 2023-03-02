@@ -1,0 +1,8 @@
+module:hellofx
+domini.classes
+domini.excepcions
+domini.utils
+persistencia.classes
+persistencia.excepcions
+persistencia.tests
+presentacio.classes

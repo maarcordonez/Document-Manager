@@ -1,0 +1,280 @@
+/*.button:pressed {
+    -fx-background-color: rgb(255, 119, 253);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+*/
+.list-view {
+    -fx-selection-bar:#FF99BE ;
+    -fx-selection-bar-non-focused: #FFEBF2 ;
+    -fx-border-color: #FF99BE ;
+    -fx-text-box-border: #FF99BE;
+    -fx-background-color:
+               #FF99BE,
+               #FF99BE,
+               #FF99BE,
+               white;
+}
+
+.radio-button .radio, .radio-button:selected .radio {
+    -fx-background-color: /*#FFD6E5*/ white, pink, white, white;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #FF99BE;
+    -fx-background-insets: 0;
+}
+
+/*.root:focused {
+    -fx-background-color: #FF99BE;
+}*/
+
+.text-field, .text-area{
+    -fx-text-box-border: #FF99BE;
+    /*-fx-focus-color: pink;
+    -fx-background-color: white;*/
+}
+
+.text-field: focused, .text-area: focused {
+    /*-fx-text-box-border: pink;
+    fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-focus-color: black;
+    -fx-background-color: black;*/
+
+    -fx-background-color:
+           #FF99BE,
+           #FF99BE,
+           #FF99BE,
+           white;
+}
+
+
+.button, .menu-bar, .container{
+     -fx-background-color: #FF99BE;
+     -fx-text-fill: white;
+}
+
+.menu {
+    -fx-background-color: #FF99BE;
+}
+
+.menu-item {
+    -fx-background-color: #fd8bb5;
+    -fx-text-fill: black;
+}
+
+.context-menu {
+    -fx-text-fill: black;
+}
+
+.table-view {
+    -fx-base: #FFD6E5;
+    -fx-control-inner-background: #FFD6E5;
+    -fx-background-color: white;
+    -fx-selection-bar: #FFC2D8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+
+.menu-bar .label .menu .left-container {
+    -fx-background-color: #FF99BE;
+    -fx-text-color: white;
+
+}
+
+.menu-bar:focused {
+    -fx-text-fill: black;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #FF99BE;
+}
+
+.menu-bar .label {
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+.menu-bar:focused .label:focused {
+    -fx-text-fill: black;
+    -fx-background-color: #FFEBF2;
+    -fx-opacity: 1;
+}
+
+.menu-item {
+    -fx-background-color: #FFEBF2;
+    -fx-text-fill: black;
+}
+
+.menu-item:focused {
+    -fx-background-color: #FFD6E5;
+    -fx-text-fill: black;
+}
+
+.table-row-cell:filled:focused{
+    -fx-background-color: #FFC2D8;
+}
+
+.table-view:focused .table-row-cell:selected{
+    -fx-background-color: #FFC2D8;
+}
+
+
+/*
+.background {
+    -fx-background-color: rgba(255,203,221,255);
+
+}
+    -fx-background-color: rgb(227,56,235);
+    }
+    -fx-background-color: linear-gradient(to right, rgba(227,56,235,1) 0%, rgba(255,119,252,1) 47%, rgba(252,69,88,1) 100%);
+}
+
+//-fx-background-color: linear-gradient(to right, rgba(180,58,134,1) 0%, rgba(255,119,252,1) 53%, rgba(252,69,150,1) 100%);*/
+/*linear-gradient(to right, rgba(255,194,254,1) 0%, rgba(255,63,111,1) 100%, rgba(255,15,45,1) 100%);
+linear-gradient(to right, rgba(255,194,254,1) 0%, rgba(255,63,111,1) 100%, rgba(255,15,45,1) 100%)
+
+/*
+.label {
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-opacity: 0.8;
+}
+
+.label-bright {
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #ebf5ee;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+	-fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+}
+
+/*
+ * Metro style Push Button
+ * Author: Pedro Duque Vieira
+ * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
+ */
+ /*
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+*/

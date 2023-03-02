@@ -1,0 +1,4 @@
+Això és l'autor
+Això és el títol que també inclou una etiqueta hola
+Si obrim i tanquem una etiqueta <etiqueta> s'ha obert
+</etiqueta> s'ha tancat. tampoc es mostrarà

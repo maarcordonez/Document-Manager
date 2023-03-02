@@ -1,0 +1,3 @@
+Això és l'autor
+Això és el títol
+Això és el contingut

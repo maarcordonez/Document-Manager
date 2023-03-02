@@ -1,0 +1,19 @@
+En aquest directori es troben els fitxers fonts de tot el projecte. A cada directori es troben les diferents
+parts del treball: 
+
+domini.classes: Les classes de la capa de domini del projecte
+domini.excepcions: Excepcions utilitzades a les diferents classes de domini
+domini.utils: Classes auxiliars i fitxer d'stopwords
+
+icones2: conte les icones que s'utilitzen a l'aplicacio
+
+persistencia.classes: Les classes de la capa de persistencia del projecte
+persistencia.excepcions: Excepcions utilitzades a les diferents classes de persistencia
+persistencia.tests: Tests unitaris persistencia
+
+presentacio.classes: Les classes de la capa de presentacio del projecte
+                     Tambe conte els fitxers .fxml que contenen la informacio de les vistes i el fitxer styles.css que dona estil a les vistes
+
+module-info.java: Fitxer necessari per crear el modul del projecte.
+
+En aquest directori tambe es pot trobar l'executable Make.bat per compilar tots els fitxers .java

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"hellofx","l":"domini.classes"},{"m":"hellofx","l":"domini.excepcions"},{"m":"hellofx","l":"domini.utils"},{"m":"hellofx","l":"persistencia.classes"},{"m":"hellofx","l":"persistencia.excepcions"},{"m":"hellofx","l":"persistencia.tests"},{"m":"hellofx","l":"presentacio.classes"}]

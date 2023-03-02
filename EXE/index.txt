@@ -1,0 +1,7 @@
+Si es vol executar el programa s'ha de executar el fitxer Start.bat
+
+El directori ./lib son les llibreries necessaries per executar el JAR
+
+El fitxer Jocs de Proves conte la documentacio de tots els jocs de proves que hem posat (esta duplicat a DOCS)
+
+Tambe esta un zip amb tots els documents que hem utilitzat pels jocs de prova

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFEBF2;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacio.classes.ModificarDocument">
+    <top>
+        <MenuBar fx:id="myMenuBar" layoutY="2.0" prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: FF99BE;">
+            <menus>
+                <Menu mnemonicParsing="false" text="Fitxer">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#carregaNouDocument" text="Nou Document" />
+                        <MenuItem mnemonicParsing="false" onAction="#obreDoc" text="Importar" />
+                        <MenuItem mnemonicParsing="false" onAction="#guardaDoc" text="Desar" />
+                        <Menu mnemonicParsing="false" text="Exportar">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#baixaDocumentTxt" text=".txt" />
+                                <MenuItem mnemonicParsing="false" onAction="#baixaDocumentXML" text=".xml" />
+                                <MenuItem mnemonicParsing="false" onAction="#baixaDocumentKitty" text=".kitty" />
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#eliminaDocument" text="Eliminar" />
+                        <MenuItem mnemonicParsing="false" onAction="#carregaMainMenu" text="Menu Principal" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edita">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#esborraTot" text="Esborra tot" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Més">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#carregaGit" text="GitLab" />
+                    </items>
+                </Menu>
+                <Menu fx:id="desatMessage" mnemonicParsing="false" text="Desat! :D" visible="false" />
+            </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane maxHeight="1.7976931348623157E308" prefHeight="121.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="false" maxHeight="15.0" minHeight="0.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="15.0" minHeight="2.3999916076659957" prefHeight="15.0" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="15.0" minHeight="0.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="240.80000610351564" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Titol" />
+                <Label text="Autor" GridPane.rowIndex="2" />
+                <Label text="Contingut" GridPane.rowIndex="4" />
+                <TextField fx:id="nouTitol" GridPane.rowIndex="1" />
+                <TextField fx:id="nouAutor" maxHeight="25.0" GridPane.rowIndex="3" />
+                <BorderPane prefHeight="225.0" prefWidth="539.0" GridPane.rowIndex="5">
+                    <center>
+                        <TextArea fx:id="nouContingut" prefHeight="216.0" prefWidth="430.0" BorderPane.alignment="CENTER" />
+                    </center>
+                    <right>
+                        <GridPane prefHeight="233.0" prefWidth="128.0" BorderPane.alignment="CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="144.8000259399414" vgrow="SOMETIMES" />
+                                <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#tornaEnrere" prefHeight="20.0" prefWidth="159.0" text="Enrere" GridPane.rowIndex="3">
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icones2/icons8-izquierda-24.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <Button fx:id="guardarButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#guardaDoc" prefHeight="20.0" prefWidth="129.0" text="Desar" GridPane.rowIndex="2">
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icones2/icons8-guardar-32.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <MenuButton alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #FF99BE;" text="Exportar" textFill="WHITE" GridPane.rowIndex="1">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#baixaDocumentTxt" text=".txt" />
+                                        <MenuItem mnemonicParsing="false" onAction="#baixaDocumentXML" text=".xml" />
+                                        <MenuItem mnemonicParsing="false" onAction="#baixaDocumentKitty" text=".kitty" />
+                                    </items>
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icones2/icons8-abajo-círculo-24.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </MenuButton>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets left="10.0" />
+                            </BorderPane.margin>
+                        </GridPane>
+                    </right>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" />
+                    </GridPane.margin>
+                </BorderPane>
+            </children>
+            <BorderPane.margin>
+                <Insets left="30.0" right="30.0" top="10.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+</BorderPane>

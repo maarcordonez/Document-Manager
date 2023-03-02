@@ -1,0 +1,8 @@
+A la carpeta Entrega1 estan els documents de la primera entrega
+A la carpeta Entrega2 estan els documents de la segona entrega
+
+El manual d'usuari esta inclos tambe en aquest directori
+
+El fitxer Jocs de Prova conte tots els jocs de prova que hem posat (Esta duplicat a EXE)
+
+Tambe esta el document amb la relacio de classes per cada membre de lequip

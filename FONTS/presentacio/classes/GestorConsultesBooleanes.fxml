@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFEBF2;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacio.classes.GestorConsultesBooleanes">
+    <top>
+        <GridPane stylesheets="@styles.css" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="25.60001220703125" minHeight="0.0" prefHeight="25.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="35.19998779296875" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+
+                <MenuBar fx:id="myMenuBar" layoutY="2.0" maxHeight="25.6" prefHeight="25.6" prefWidth="600.0" style="-fx-background-color: FF99BE;">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Opcions">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#carregaMain" text="Menu" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Tipus d'input">
+                            <items>
+                                <RadioMenuItem fx:id="nomMode" mnemonicParsing="false" onAction="#activaNom" text="Nom">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="tipusInput" />
+                                    </toggleGroup>
+                                </RadioMenuItem>
+                                <RadioMenuItem fx:id="expMode" mnemonicParsing="false" onAction="#activaExprBool" selected="true" text="Expressió booleana" toggleGroup="$tipusInput" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Més">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#carregaGitlab" text="GitLab" />
+                            </items>
+                        </Menu>
+                    </menus>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </MenuBar>
+                <GridPane maxHeight="62.0" prefHeight="62.0" prefWidth="557.0" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="404.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints fillHeight="false" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="tipusLabel" text="Expressió booleana" />
+                        <TextField fx:id="input" prefHeight="35.0" prefWidth="409.0" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="desaLateraButton" mnemonicParsing="false" onAction="#desaConsultaLateral" prefHeight="25.0" prefWidth="200.0" text="Desa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cercaConsulta" prefHeight="25.0" prefWidth="200.0" text="Cerca" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                    </children>
+                    <GridPane.margin>
+                        <Insets left="20.0" right="20.0" top="15.0" />
+                    </GridPane.margin>
+                </GridPane>
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <GridPane prefHeight="322.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="4.0" prefHeight="276.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Resultat Consulta" />
+                <Label fx:id="historialIGuardatLabel" text="Historial" GridPane.columnIndex="1" />
+                <ListView fx:id="llistaDocuments" prefHeight="280.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </ListView>
+                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="196.8" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <ListView fx:id="llistaConsultes" prefHeight="115.0" prefWidth="281.0" stylesheets="@styles.css">
+                            <GridPane.margin>
+                                <Insets bottom="10.0" />
+                            </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </ListView>
+                        <GridPane prefHeight="0.0" prefWidth="280.0" GridPane.rowIndex="1">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="15.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <RadioButton fx:id="historialRadio" mnemonicParsing="false" onAction="#activaHistorial" selected="true" text="Historial">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="consTip" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="consultaRadio" mnemonicParsing="false" onAction="#activaConsultesDesades" text="Desades" toggleGroup="$consTip" GridPane.columnIndex="1" />
+                            </children>
+                        </GridPane>
+                        <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#tornaEnrere" prefHeight="9.0" prefWidth="280.0" stylesheets="@styles.css" text="Enrere" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <GridPane GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="eliminaButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#eliminarConsulta" prefHeight="26.0" prefWidth="300.0" text="Eliminar" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="desarButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#desarConsulta" prefHeight="26.0" prefWidth="123.0" text="Desar">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="nombraButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modificaNomConsulta" prefHeight="26.0" prefWidth="300.0" text="Modificar" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </GridPane>
+                    </children>
+                </GridPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+</BorderPane>
