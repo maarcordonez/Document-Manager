@@ -1,6 +1,6 @@
 # DocKitty
 ## Per més informació del projecte:
-
+https://github.com/maarcordonez/Document-Manager/blob/main/DOCS/Manual%20d'usuari.pdf
 
 ## Compilar i executar:
 
