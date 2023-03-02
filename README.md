@@ -1,4 +1,6 @@
 # DocKitty
+## Per més informació del projecte:
+
 
 ## Compilar i executar:
 
